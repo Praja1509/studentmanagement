@@ -10,3 +10,6 @@ Dashboard
 Payment
 ![payment](https://user-images.githubusercontent.com/106908866/172058956-7c06633c-a052-496c-bbe9-eef3ebcb7032.png)
 
+Admin
+![admin](https://user-images.githubusercontent.com/106908866/172058996-7c1e1dbd-15e5-4320-9d26-fbd45bb6005a.png)
+
