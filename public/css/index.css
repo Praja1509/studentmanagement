@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    height: 100vh;
+    width: 100vw;
+}
+#sidebar{
+    width: 10vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #07ADED, white);
+   float: right;
+   margin-right:-5%;
+   z-index: 1;
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    height: 70vh;
+    z-index: 3;
+    position: relative;
+    left: 4%;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.812);
+    border-radius:10px;
+   
+}
+#primary{
+
+    background: url('/images/collage11.jpg') no-repeat center;
+    background-size: cover;
+    width:48vw;
+    height:70vh;
+    color:white;
+}
+#collagebackground{
+   
+    background: linear-gradient(to bottom,#07adedcf,#ffffffde);
+    background-blend-mode: darken;
+    width:48vw;
+    height: 70vh;
+}
+#secondary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#0E1A30;
+    width:27vw;
+    height:70vh;
+    color:white;
+    flex-direction: column;
+    
+}
+#loginform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 2%;
+    /* /* width: 25vw; */
+    /* height: 40vh;  */
+    /* border: 2px solid white; */
+
+}
+.login-detail{
+    outline: none;
+    overflow: hidden;
+    text-align:left;
+    border-right: 0px solid #2196f3;
+    border-bottom: 0px solid #2196f3;
+    /* box-shadow: 3px 3px 6px #2196f3; */
+    background-color: rgb(204, 209, 212);
+    border-radius: 5px;
+   margin: 8px 10px;
+   padding: 7px 4px;
+   color: black;
+   font-weight: bold;
+   width:20vw;
+   
+
+}
+ion-icon{
+    color:lightgray;
+  overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:2rem;
+    margin: 1% 0px -3% 1px;
+
+}
+#head{
+    width: 180px;
+}
+#head img{
+    width: 55px;
+   height: 50px;
+}
+#head span{
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 5px;
+    font-size:2rem;
+    font-weight: 800;
+    color: whitesmoke;
+    position: relative;
+    top: -10px;
+    left: 2px;
+}
+
+#forgot{
+    text-decoration:underline;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing:normal;
+    font-size: 15px;
+    font-weight: 400;
+    color:white;
+    position: absolute;
+   top: 50%;
+}
+#forgot:hover{
+    color:aqua;
+    cursor: pointer;
+}
+#admin{
+    text-decoration:underline;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing:normal;
+    font-size: 15px;
+    font-weight: 400;
+    color:white;
+    position: absolute;
+   top:61%;
+   /* left: 40%; */
+   /* margin-bottom: 10vh; */
+}
+#admin:hover{
+    color:aqua;
+    cursor: pointer;
+}
+#btn{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    background-color:#04B0EF;
+    color: white;
+    border-radius: 5px;
+    width: 8vw;
+   display: block;
+   margin: 15px auto;
+   text-decoration: none;
+    /* margin: 15px 135PX; */
+    padding: 6px 1px;
+    border: none;
+    outline: none;
+    /* position:absolute; */
+    /* top: 10%; */
+}
+#btn:hover{
+    background:#2196f3;
+     box-shadow: 0 0 10px #2196f3,0 0 15px #2196f3;
+     outline:1px solid white;
+     outline-offset:-.25em;
+}
+
+
+.copyright{
+   display: flex;
+   justify-content: center;
+   align-content: center;
+    position: absolute;
+    top: 90%;
+    width: 100vw;
+    z-index: 6;
+}
+#copyright{
+    margin: 0;
+    letter-spacing: 3px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 10px;
+    font-weight: 450;
+    color: #04B0EF;
+    position: relative;
+    left: 40px;
+}
+#mohit{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    background-image: linear-gradient(90deg, red,blue);
+    -webkit-background-clip: text;
+    color:transparent;
+    position:relative;
+    left:3.3%;
+}

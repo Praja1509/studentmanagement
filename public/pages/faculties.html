@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Faculties | Vikrant Group of Institution</title>
+     <link rel="icon" href="../../images/colgo.png">
+     <link rel="stylesheet" href="/css/faculties.css">
+     <!-- for icon -->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <!-- for boxicon  -->
+     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+<!-- for title effect -->
+<script type="text/javascript" src="/js/vanilla-tilt.js"></script>
+
+</head>
+
+<body>
+     
+     <div class="container">
+ <!--          **for header**
+------------------------------------------------------------------------------------           -->         
+               <nav id="navbar">
+                    <div id="first"><div id="head">
+                         <img src="../../images/colgo.png" alt="logo"><span>VITM</span>
+                    </div></div>
+
+                    <div id="second"><span id="menu"><ion-icon name="menu-outline"></ion-icon></span><span id="dashboard" >FACULTIES</span></div>
+
+                    <div id="third">
+                         <div id="toggle">
+                              <label>
+                                   <input id="mode" onclick="toggle()" type="checkbox">
+                                   <span>
+                                        <i> </i>
+                                   </span>
+                              </label>
+                         </div>
+                         <div id="notification">
+                              <ion-icon name="notifications-outline"></ion-icon>
+                         </div>
+                         <div id="user">
+                              <!-- <ion-icon name="person-outline"></ion-icon> -->
+                              
+                         </div>
+                         <span><ion-icon id="down" name="caret-down-outline"></ion-icon></span>
+                    </div>
+               </nav>
+               
+<!-- ------------------------------------------------------------------------------------           -->   
+
+<!-- **for side bar** ------------------------------------------------------------------------------------           -->  
+<div id="side2">
+     <div class="sidebar" id="darkmode" >
+     
+          <ul>
+               <li class="list ">
+                    <a href="dashboard.html">
+                         <span class="icon"><ion-icon class="icon" name="home-outline"></ion-icon></span>
+                         <span class="title">Dashboard</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="account.html" target="_blank">
+                         <span class="icon"><ion-icon class="icon" name="person-outline"></ion-icon></span>
+                         <span class="title">Account</span>
+                    </a>
+               </li>
+               <li >
+                    <a href="attendence.html">
+                         <span class="icon"><ion-icon class="icon" name="clipboard-outline"></ion-icon></span>
+                         <span class="title">Attendence</span>
+                    </a>
+               </li>
+               <li >
+                    <a href="marks.html">
+                         <span class="icon"><ion-icon class="icon" name="ribbon-outline"></ion-icon></span>
+                         <span class="title">Marks</span>
+                    </a>
+               </li>
+               <li >
+                    <a href="notes.html">
+                         <span class="icon"><ion-icon class="icon" name="book-outline"></ion-icon></span>
+                         <span class="title">Notes</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="timetable.html">
+                         <span class="icon"><ion-icon class="icon" name="calendar-outline"></ion-icon></span>
+                         <span class="title">Time-table</span>
+                    </a>
+               </li>
+               <li class="active">
+                    <a href="faculties.html">
+                         <span class="icon"><ion-icon class="icon" name="people-outline"></ion-icon></span>
+                         <span class="title">Faculties</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="busroute.html">
+                         <span class="icon"><ion-icon class="icon" name="bus-outline"></ion-icon></span>
+                         <span class="title">Bus routes</span>
+                    </a>
+               </li>
+               <li >
+                    <a href="registration.html">
+                         <span class="icon"><ion-icon class="icon" name="create-outline"></ion-icon></span>
+                         <span class="title">Registration</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="about.html">
+                         <span class="icon"><ion-icon class="icon" name="information-outline"></ion-icon></span>
+                         <span class="title">About</span>
+                    </a>
+               </li>
+               <li>
+                    <a  onclick="document.getElementById('signoutbox').style.display='block'">
+                         <span class="icon"><ion-icon class="icon" name="log-out-outline"></ion-icon></span>
+                         <span class="title">Sign Out</span> 
+                    </a>
+               </li>
+          </ul>
+        
+     </div> 
+     <!-- for main content  -->
+     <div class="content">
+          <div id="sidebar"></div>
+          <div id="contentbox">
+               <div id="edithead">
+                    <h3>Faculties</h3>
+               </div>
+      <div id="facultybox">
+          <div class="card">
+               <div class="imagebox">
+                    <img src="../images/teachers/anand.png" alt="">
+               </div>
+               <div class="details">
+                    <h3>Prof. <span>Anand Bisen</span></h3>
+                    <p>
+                    
+Department : Computer Science & IT <br>
+Qualification :M.Tech(CSE), Ph.D.<br>
+Specialization :DBMS & Networking <br>
+E-mail ID : <a href="">anandsingh@vitm.edu.in</a> <br>
+Contact no. : 910xxxx369
+                    </p>
+               </div>
+               <div id="bottomhead">
+                    <span>Principal</span>
+               </div>
+          </div>
+          <div class="card">
+               <div class="imagebox">
+                    <img src="../images/teachers/dileep.png" alt="">
+               </div>
+               <div class="details">
+                    <h3>Prof. <span>Dileep Singh</span></h3>
+                    <p>
+                    
+Department : Computer Science & IT <br>
+Qualification : MCA <br>
+Specialization : S/W Development, ERP. <br>
+E-mail ID : <a href="">cs_dileep@vitm.edu.in</a> <br>
+Contact no. : 910xxxx369
+                    </p>
+               </div>
+               <div id="bottomhead">
+                    <span>Sr.Engineer</span>
+               </div>
+          </div>
+          <div class="card">
+               <div class="imagebox">
+                    <img src="../images/teachers/sandeep.png" alt="">
+               </div>
+               <div class="details">
+                    <h3>Prof. <span>Sandeep K Tiwari</span></h3>
+                    <p>
+                    
+                         Department : Computer Science & IT <br>
+                         Qualification : C DAC,M.Tech <br>
+                         Specialization : Wireless/SoftComputing<br>
+                         E-mail ID : <a href="">cs_sandeep@vitm.edu.in </a><br>
+Contact no. : 910xxxx369
+                    </p>
+               </div>
+               <div id="bottomhead">
+                    <span>HoD</span>
+               </div>
+          </div>
+          <div class="card">
+               <div class="imagebox">
+                    <img src="../images/teachers/ramnaresh.png" alt="">
+               </div>
+               <div class="details">
+                    <h3>Mr.<span> Kartik Kushwah</span></h3>
+                    <p>
+                    
+Department : Computer Science & IT <br>
+Qualification :Computer Network<br>
+Specialization : BTech.,RedHat Certified<br>
+E-mail ID : <a href="">cs_kartik@vitm.edu.in</a> <br>
+Contact no. : 910xxxx369
+                    </p>
+               </div>
+               <div id="bottomhead">
+                    <span>Lab Assistant</span>
+               </div>
+          </div>
+          <div class="card">
+               <div class="imagebox">
+                    <img src="../images/teachers/surjeet.png" alt="">
+               </div>
+               <div class="details">
+                    <h3>Prof. <span>Surjeet Singh</span></h3>
+                    <p>
+                    
+Department : Computer Science & IT <br>
+Qualification : MCA <br>
+Specialization : Programming & Graphics<br>
+E-mail ID : <a href="">cs_surjeet@vitm.edu.in</a><br>
+Contact no. : 910xxxx369
+                    </p>
+               </div>
+               <div id="bottomhead">
+                    <span>Asst. Professor</span>
+               </div>
+          </div>
+         
+          <div class="card">
+               <div class="imagebox">
+                    <img src="../images/teachers/ramnaresh.png" alt="">
+               </div>
+               <div class="details">
+                    <h3>Prof. <span> Ram Naresh</span></h3>
+                    <p>
+                    
+Department : Computer Science & IT <br>
+Qualification :M.Tech., B.E.<br>
+Specialization : Soft Computing<br>
+E-mail ID : NA <br>
+Contact no. : 910xxxx369
+                    </p>
+               </div>
+               <div id="bottomhead">
+                    <span>Asst. Professor</span>
+               </div>
+
+          </div>
+      </div>
+
+
+
+               </div>
+          </div>
+     
+     
+     </div>
+     <div id="signoutbox" class="modal">
+          <div id="sign2">
+               <span onclick="document.getElementById('signoutbox').style.display='none'" id="close">&times;</span>
+               <h3>Are you sure want to sign out</h3>
+               <a href="/">Yes</a><button onclick="document.getElementById('signoutbox').style.display='none'">No</button>
+          </div>
+     </div>
+    
+</div>
+
+
+
+<!-- for footer             -->
+<!-- <div id="foot">this is footer</div> -->
+     </div>
+     
+</body>
+<script type="text/javascript">
+     // for tilt 
+	VanillaTilt.init(document.querySelectorAll(".card"), {
+		max: 25,
+		speed: 200,
+          glare:true,
+          "max-glare":1,
+	});
+     // for mode 
+     let not=document.querySelector('#third');
+     let side2=document.querySelector('.sidebar');
+     let content=document.querySelector('.content');
+     let contentbox=document.querySelector('#contentbox');
+     let edithead=document.querySelector('#edithead');
+     console.log(not);
+      function toggle() {
+          if(mode.checked==true){
+               document.body.style.background = "black";
+               navbar.style.color="black";
+               navbar.style.background="white";
+               not.style.color = "black";
+               not.style.background = "white";
+               side2.style.background = "white";
+               content.style.background = "black";
+               contentbox.style.background = "black";
+               edithead.style.background = "black";
+               edithead.style.color = "white";
+               
+          }else{
+               document.body.style.background = "white";
+               navbar.style.color="white";
+               navbar.style.background="black";
+               not.style.color = "white";
+               not.style.background = "black";
+               side2.style.background = "black";
+               content.style.background = "white";
+               contentbox.style.background = "white";
+               edithead.style.background = "white";
+               edithead.style.color = "black";
+          }
+          
+     }
+     
+
+</script>
+</html>

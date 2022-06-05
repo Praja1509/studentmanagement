@@ -1,0 +1,85 @@
+const mongoose = require('mongoose');
+
+const studentschema= new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    fname:{
+        type:String,
+        required:true
+    },
+    mname:{
+        type:String,
+        required:true
+    },
+    course:{
+        type:String,
+        required:true
+    },
+    branch:{
+        type:String,
+        required:true
+    },
+    semester:{
+        type:Number,
+        required:true
+    },
+    gender:{
+        type:String,
+        required:true
+    },
+    state:{
+        type:String,
+        required:true
+    },
+    city:{
+        type:String,
+        required:true
+    },
+    pin:{
+        type:Number,
+        required:true
+     },
+     address:{
+        type:String,
+        required:true
+    },
+    addmissionyear:{
+        type:Number,
+        required:true
+     },
+    dob:{
+        type:Date,
+        required:true
+     },
+     age:{
+        type:Number,
+        required:true
+     },
+    email:{
+       type:String,
+       required:true
+    },
+    phone:{
+        type:Number,
+        required:true
+     },
+    enrollment:{
+       type:String,
+       required:true
+    },
+    password:{
+       type:String,
+       required:true
+    },
+    cpassword:{
+       type:String,
+       required:true
+    }
+
+})
+
+//create a collection
+const Register= new mongoose.model("Register", studentschema);
+module.exports=Register;

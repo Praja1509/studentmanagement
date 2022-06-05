@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dashboard | Vikrant Group of Institution</title>
+     <link rel="icon" href="../images/colgo.png">
+     <link rel="stylesheet" href="css/dashboard.css">
+     <!-- for icon -->
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+     <!-- for boxicon  -->
+     <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+<!-- for title effect -->
+<script type="text/javascript" src="js/vanilla-tilt.js"></script>
+</head>
+
+<body>
+     
+     <div class="container">
+ <!--          **for header**
+------------------------------------------------------------------------------------           -->         
+               <nav id="navbar">
+                    <div id="first"><div id="head">
+                         <img src="../images/colgo.png" alt="logo"><span>VITM</span>
+                    </div></div>
+
+                    <div id="second"><span id="menu"><ion-icon name="menu-outline"></ion-icon></span><span id="dashboard" >DASHBOARD</span></div>
+
+                    <div id="third">
+                         <div id="toggle">
+                              <label>
+                                   <input id="mode" onclick="toggle()" type="checkbox">
+                                   <span>
+                                        <i> </i>
+                                   </span>
+                              </label>
+                         </div>
+                         <div id="notification">
+                              <ion-icon name="notifications-outline"></ion-icon>
+                         </div>
+                         <div id="user">
+                              <!-- <ion-icon name="person-outline"></ion-icon> -->
+                              
+                         </div>
+                         <span><ion-icon id="down"  name="caret-down-outline">
+                         </ion-icon></span>
+                    </div>
+               </nav>
+               
+<!-- -------------------------------------------------------------------------------------->   
+
+<!-- **for side bar** ------------------------------------------------------------------------------------           -->  
+<div id="side2">
+     <div class="sidebar">
+     
+          <ul>
+               <li class="list active">
+                    <a href="/pages/dashboard.html">
+                         <span class="icon"><ion-icon class="icon" name="home-outline"></ion-icon></span>
+                         <span class="title">Dashboard</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/account.html">
+                         <span class="icon"><ion-icon class="icon" name="person-outline"></ion-icon></span>
+                         <span class="title">Account</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/attendence.html">
+                         <span class="icon"><ion-icon class="icon" name="clipboard-outline"></ion-icon></span>
+                         <span class="title">Attendence</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/marks.html">
+                         <span class="icon"><ion-icon class="icon" name="ribbon-outline"></ion-icon></span>
+                         <span class="title">Marks</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/notes.html">
+                         <span class="icon"><ion-icon class="icon" name="book-outline"></ion-icon></span>
+                         <span class="title">Notes</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/timetable.html">
+                         <span class="icon"><ion-icon class="icon" name="calendar-outline"></ion-icon></span>
+                         <span class="title">Time-table</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/faculties.html">
+                         <span class="icon"><ion-icon class="icon" name="people-outline"></ion-icon></span>
+                         <span class="title">Faculties</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/busroute.html">
+                         <span class="icon"><ion-icon class="icon" name="bus-outline"></ion-icon></span>
+                         <span class="title">Bus routes</span>
+                    </a>
+               </li>
+               <li >
+                    <a href="/pages/registration.html">
+                         <span class="icon"><ion-icon class="icon" name="create-outline"></ion-icon></span>
+                         <span class="title">Registration</span>
+                    </a>
+               </li>
+               <li>
+                    <a href="/pages/about.html">
+                         <span class="icon"><ion-icon class="icon" name="information-outline"></ion-icon></span>
+                         <span class="title">About</span>
+                    </a>
+               </li>
+               <li>
+                    <a  onclick="document.getElementById('signoutbox').style.display='block'">
+                         <span class="icon"><ion-icon class="icon" name="log-out-outline"></ion-icon></span>
+                         <span class="title">Sign Out</span> 
+                    </a>
+               </li>
+          </ul>
+        
+     </div> 
+     <!-- <span class="icon"><ion-icon class="icon" name="log-out-outline"></ion-icon></span>
+     <span class="title">Sign Out</span> -->
+     <!-- for main content  -->
+     <div class="content">
+          <div id="sidebar"></div>
+          <div id="contentbox">
+               <div id="edithead">
+                    <h3>Student Details</h3>
+               </div>
+          
+               <div id="start">
+                    <div id="photo">
+                         <img src="../images/profile1.png" alt="">
+                    </div>
+                    <div id="box">
+                         <div id="box2">
+                              <% studentList.forEach(register=>{ %>
+                                   <h2><%= register.name %></h2>
+                                   <h3><%= register.fname %></h3>
+                                   <% }) %>
+                            
+                         </div>
+                    
+                    </div>
+                  
+                  </div>
+                  <div id="box3">
+                       <div id="box4">
+                         <% studentList.forEach(register=>{ %>
+                              <p>Email : <%= register.email %></p>
+                              <p>DOB : <%= register.dob %></p>
+                              <p>Gender : <%= register.gender %></p>
+                              <p>Age : <%= register.age%></p>
+                              <P>Contact no. : <%= register.phone %></P>
+                              <p>Brach: <%= register.course %> (<%= register.branch %>)</p>
+                              <P>Enrollment no. : <%= register.enrollment %></P>
+                              <p>Address : <%= register.address %></p>
+                              <p>Admission Year : <%= register.addmissionyear %> </p>
+                              <% }) %>
+                        
+                       </div>
+     </div>
+              
+               
+          </div>
+     
+     
+     </div>
+   
+    
+</div>
+<div id="signoutbox" class="modal">
+     <div id="sign2">
+          <span onclick="document.getElementById('signoutbox').style.display='none'" id="close">&times;</span>
+          <h3>Are you sure want to sign out</h3>
+          <a href="/">Yes</a><button onclick="document.getElementById('signoutbox').style.display='none'">No</button>
+     </div>
+</div>
+
+
+<!-- for footer             -->
+<!-- <div id="foot">this is footer</div> -->
+     </div>
+     
+</body>
+<script type="text/javascript">
+     // for tilt 
+	VanillaTilt.init(document.querySelector("#contentbox"), {
+		max: 8,
+		speed: 200,
+          // glare:true,
+          // "max-glare":2,
+	});
+     // for mode 
+     let not=document.querySelectorAll('#third');
+     console.log(not);
+      function toggle() {
+          if(mode.checked==true){
+               document.body.style.background = "black";
+               navbar.style.color="black";
+               navbar.style.background="white";
+               not.style.color = "black";
+               
+          }else{
+               document.body.style.background = "white";
+               navbar.style.color="white";
+               navbar.style.background="black";
+
+          }
+          
+     }
+     var model=document.getElementById('signoutbox');
+     window.onclick = function(event) {
+         if (event.target ==model) {
+             model.style.display = "none";
+         }
+     }
+
+</script>
+</html>

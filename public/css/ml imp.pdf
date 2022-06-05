@@ -1,0 +1,39 @@
+Convolutional Neural Network -
+ Introduction-
+A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning algorithm which can take in an input image, 
+assign importance (learnable weights and biases) to various aspects/objects in the image and be able to differentiate one from the other.
+The pre-processing required in a ConvNet is much lower as compared to other classification algorithms.
+ ConvNets have the ability to learn these filters/characteristics.
+The architecture of a ConvNet is analogous to that of the connectivity pattern of Neurons in the Human Brain and was inspired by 
+the organization of the Visual Cortex. Individual neurons respond to stimuli only in a restricted region of the visual field known as 
+the Receptive Field. A collection of such fields overlap to cover the entire visual area.
+A ConvNet is able to successfully capture the Spatial and Temporal dependencies in an image through the application of relevant filters. 
+In other words, the network can be trained to understand the sophistication of the image better.
+Importance-
+The role of the ConvNet is to reduce the images into a form which is easier to process, without losing features which are critical 
+for getting a good prediction. This is important when we are to design an architecture which is not only good at learning features but 
+also is scalable to massive datasets.
+The objective of the Convolution Operation is to extract the high-level features such as edges, from the input image.
+ ConvNets need not be limited to only one Convolutional Layer. 
+There are two types of results to the operation — one in which the convolved feature is reduced in dimensionality as compared to the input,
+and the other in which the dimensionality is either increased or remains the same. This is done by applying Valid Padding in case of the
+former, or Same Padding in the case of the latter.
+When we augment the 5x5x1 image into a 6x6x1 image and then apply the 3x3x1 kernel over it, we find that the convolved matrix turns out
+to be of dimensions 5x5x1. Hence the name — Same Padding.
+On the other hand, if we perform the same operation without padding, we are presented with a matrix which has dimensions of the 
+Kernel (3x3x1) itself — Valid Padding
+Pooling Layer-
+ the Pooling layer is responsible for reducing the spatial size of the Convolved Feature. This is to decrease the computational 
+power required to process the data through dimensionality reduction.
+There are two types of Pooling: Max Pooling and Average Pooling. Max Pooling returns the maximum value from the portion of the
+image covered by the Kernel. On the other hand, Average Pooling returns the average of all the values from the portion of the image 
+covered by the Kernel.
+There are various architectures of CNNs available which have been key in building algorithms
+1.LeNet
+2.AlexNet
+3.VGGNet
+4.GoogLeNet
+5.ResNet
+6.ZFNet
+
+

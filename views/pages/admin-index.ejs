@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page | Vikrant Group of Institutions</title>
+    <link rel="stylesheet" href="/css/admin-index.css">
+    <link rel="icon" href="/images/colgo.png">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- -----bootstrap file -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+</head>
+<body>
+    <div class="container">
+        <head>
+            <nav>
+                <div class="first">
+                    <div id="head">
+                        <img src="../../images/colgo.png" alt="logo"><span>VITM</span>
+                   </div>
+                </div>
+                <div id="third">
+                    <div id="toggle">
+                         <label>
+                              <input id="mode" onclick="toggle()" type="checkbox">
+                              <span>
+                                   <i> </i>
+                              </span>
+                         </label>
+                    </div>
+                    <div id="notification">
+                         <ion-icon name="notifications-outline"></ion-icon>
+                    </div>
+                    <div id="user">
+                         <!-- <ion-icon name="person-outline"></ion-icon> -->
+                         
+                    </div>
+                    <span><ion-icon id="down" name="caret-down-outline"></ion-icon></span>
+               </div>
+            </nav>
+        </head>
+
+        <!-- -----------------maincontent -->
+        <div class="maincontent">
+            <div id="edithead">
+                <h3>Admin</h3>
+           </div>
+           <section id="searchbox">
+               <input class="login-detail" type="text" placeholder="Enter Enrollment Number or names" id="myinp">
+               <input type="submit" value="Search" id="btn" onclick="searchfun()">
+           </section>
+           <section id="functions">
+            <button onclick="document.getElementById('101').style.display='block'" id="add">
+                <p>&#9535</p>
+                <br>
+                Add Student
+            </button> 
+           </section>
+        <section id="table">
+            <h2>Student List</h2>
+            <table class="table" id="mytable">
+                <thead>
+                  <!-- <tr> -->
+                    <!-- <th id="">Sr.</th> -->
+                    <th id="name">Name</th>
+                    <th id="email">Email</th>
+                    <th id="enrollment">Enrollment</th>
+                    <th id="phone">Phone</th>
+                    <th id="action">Action</th>
+                  <!-- </tr> -->
+                </thead>
+                <tbody>
+                   <%studentList.forEach(register=>{ %>
+                        <tr>
+                            <!-- <th scope="row"><%=register.id%></th> -->
+                            <td><%=register.name%></td>
+                            <td class="dataemail"><%=register.email%></td>
+                            <td><%=register.enrollment%></td>
+                            <td><%=register.phone%></td>
+                            <td><button onclick="document.getElementById('viewdata').style.display='block',add_btn()" class="view-btn">View Details</button></td>
+                            
+                          </tr>
+                        <% }) %>
+                
+                </tbody> 
+              </table>
+        </section>
+        </div>
+
+    </div>
+    <div id="101" class="modal">
+            <form action="/adminindex" method="post" class="modal-content animate" >
+                <h2> Add Student Details</h2>
+                <span onclick="document.getElementById('101').style.display='none'" class="close">&times;</span>
+                <span >Name : </span><input class="formdetails"  type="text" name="name" id=""><br>
+                <span >Fathter's Name : </span><input class="formdetails"  type="text" name="fname" id=""><br>
+                <span >Mother's Name : </span><input class="formdetails"  type="text" name="mname" id=""><br>
+            <span  >Course : </span>
+            <select class="forselect" name="course" id="">
+                 <option value="B.tech">B.tech</option>
+                 <option value="B.com">B.com</option>
+                 <option value="B.sc">B.sc</option>
+                 <option value="Ballb">BALLB</option>
+                 <option value="Bpharma">B.Pharma</option>
+            </select>
+            <span >&nbsp; &nbsp; Branch : </span>
+            <select class="forselect" name="branch" id="">
+             <option value="CS">CS</option>
+             <option value="IT">IT</option>
+             <option value="FT">FT</option>
+             <option value="EE">EE</option>
+             <option value="EC">EC</option>
+             <option value="ME">ME</option>
+             <option value="Civil">Civil</option>
+        </select>
+            <span >&nbsp; &nbsp; Semester : </span>
+            <select class="forselect" name="semester"    id="">
+                 <option value="1">1st</option>
+                 <option value="2">2nd</option>
+                 <option value="3">3rd</option>
+                 <option value="4">4th</option>
+                 <option value="5">5th</option>
+                 <option value="6">6th</option>
+                 <option value="7">7th</option>
+                 <option value="8">8th</option>
+            </select>
+            <br>
+                <p id="gender">Gender: 
+                     <input type="radio" name="gender"  value="male" >Male 
+                     <input type="radio" name="gender" value="female" >Female
+                     <input type="radio" name="gender"  value="other">Other
+                    </p>
+                    <span >State : </span>
+                    <select  name="state" id="state" class="formdetails" >
+                     <option value="Andhra Pradesh">Andhra Pradesh</option>
+                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                     <option value="Assam">Assam</option>
+                     <option value="Bihar">Bihar</option>
+                     <option value="Chandigarh">Chandigarh</option>
+                     <option value="Chhattisgarh">Chhattisgarh</option>
+                     <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                     <option value="Daman and Diu">Daman and Diu</option>
+                     <option value="Delhi">Delhi</option>
+                     <option value="Lakshadweep">Lakshadweep</option>
+                     <option value="Puducherry">Puducherry</option>
+                     <option value="Goa">Goa</option>
+                     <option value="Gujarat">Gujarat</option>
+                     <option value="Haryana">Haryana</option>
+                     <option value="Himachal Pradesh">Himachal Pradesh</option>
+                     <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                     <option value="Jharkhand">Jharkhand</option>
+                     <option value="Karnataka">Karnataka</option>
+                     <option value="Kerala">Kerala</option>
+                     <option value="Madhya Pradesh">Madhya Pradesh</option>
+                     <option value="Maharashtra">Maharashtra</option>
+                     <option value="Manipur">Manipur</option>
+                     <option value="Meghalaya">Meghalaya</option>
+                     <option value="Mizoram">Mizoram</option>
+                     <option value="Nagaland">Nagaland</option>
+                     <option value="Odisha">Odisha</option>
+                     <option value="Punjab">Punjab</option>
+                     <option value="Rajasthan">Rajasthan</option>
+                     <option value="Sikkim">Sikkim</option>
+                     <option value="Tamil Nadu">Tamil Nadu</option>
+                     <option value="Telangana">Telangana</option>
+                     <option value="Tripura">Tripura</option>
+                     <option value="Uttar Pradesh">Uttar Pradesh</option>
+                     <option value="Uttarakhand">Uttarakhand</option>
+                     <option value="West Bengal">West Bengal</option>
+                     </select>
+                     <br>
+                     <span >City : </span><input class="formdetails" type="text" name="city" id=""><br>
+                     <span >Pincode : </span><input class="formdetails" type="text" name="pin" id=""><br>
+                     <span>Address:</span><input class="formdetails" type="text" name="address"><br>
+                  <span>Addmission Year</span><input class="formdetails" type="tel" name="addmissionyear"><br>
+                 <p>Enter Birth Date: <input id="date" class="formdetails" type="date" name="dob"> </p>
+                 <span>Enter Age:</span><input class="formdetails" type="number" name="age"><br>
+                <span>Contact : </span><input class="formdetails" type="tel" name="phone"><br>
+            <span>Email Adress:</span><input class="formdetails" type="email" name="email"><br>
+             <span>Enrollment : </span><input class="formdetails" type="text" name="enrollment"><br>
+            <span>Enter Password</span><input class="formdetails" type="password" name="password" ><br>
+            <span>Confirm Password</span><input class="formdetails" type="password" name="cpassword"><br>
+         
+     <div class="buttonbox">
+        <input id="btn-submit" type="submit">
+        <input id="btn-reset" type="reset">
+        <button id="btn-cancel" onclick="exit">Cancel</button>
+        <a href="./login.html">login</a>
+     </div>
+            </form>
+        </div>
+            <div id="viewdata" class="studentmodal">
+                <div class="modal-data animation">
+                <span onclick="document.getElementById('viewdata').style.display='none'" class="viewclose">&times;</span>
+                    <div id="maindata">
+                        <h3>Mohit Prajapati Details</h3>
+
+                    
+                        <% studentList.forEach(register=>{ %>
+                         
+                            <% }) %>
+                     
+                    </div>
+                      
+                    </div>
+                </div>
+    </div>
+</body>
+    <script>
+        const searchfun=()=>{
+            let filter=document.getElementById('myinp').value.toUpperCase();
+            let mytable=document.getElementById('mytable');
+            // console.log(mytable)
+            let tr = mytable.getElementsByTagName('tr');
+            for(var i=1;i<tr.length;i++){
+                let td = tr[i].getElementsByTagName('td')[2];
+                let bynames = tr[i].getElementsByTagName('td')[0];
+
+                if(td){
+                    let textvalue=td.textContent || td.innerHTML;
+                    if(textvalue.toUpperCase().indexOf(filter)>-1){
+                        tr[i].style.display='';
+                    }else{
+                        tr[i].style.display='none';
+                    }
+                }
+                if(bynames){
+                    let textvalue=bynames.textContent || bynames.innerHTML;
+                    if(textvalue.toUpperCase().indexOf(filter)>-1){
+                        tr[i].style.display='';
+                    }else{
+                        tr[i].style.display='none';
+                    }
+                }
+                
+            }
+          
+        }
+     /////foraddbtn
+ 
+function add_btn(){
+    let dataemail=document.getElementsByClassName('dataemail');
+    let modaldata=document.getElementById('maindata')
+    console.log(dataemail[0].textContent);
+    console.log(dataemail.length);
+    
+    for(var i=0;i<dataemail.length;i++){
+        if(dataemail[i].textContent=='mohit@gmail.com')
+        {
+            modaldata.style.display=''
+            console.log('matched')
+            
+            break;
+        }else{
+            modaldata.style.display='none'
+            console.log('notfound')
+        }
+    }
+
+    
+
+
+}
+    </script>
+ 
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Forgotten Password | Vikrant Group of Institution</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+     <link rel="icon" href="../../images/colgo.png">
+
+     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<style>
+     *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          overflow: hidden;
+     }
+     body{
+          background-color:#fff;
+     }
+     .container{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          width: 100vw;
+          height: 100vh;
+     }
+     #head{
+          justify-content: center;
+          align-items: center;
+     width: 180px;
+}
+#head img{
+     width: 55px;
+    height: 50px;
+}
+#head span{
+     font-family: 'Ubuntu', sans-serif;
+     letter-spacing: 5px;
+     font-size:2rem;
+     font-weight: 800;
+     color:black;
+     position: relative;
+     top: -10px;
+     left: 2px;
+}
+     #box{
+          display: flex;
+          flex-direction: column;
+          width: 30vw;
+          height: 320px;
+          margin: 20px 0px;
+          background-color:#fff;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+     border-radius:10px;
+     }
+     #forget{
+          margin: 10px 10px;
+          padding:10px 10px;
+          border-bottom: 1px solid lightgray;
+     }
+     #forget p {
+         text-align: center ;
+          font-size: 1.5rem;
+          font-weight: 400;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     }
+     #forget center{
+          
+          font-size:0.8rem;
+          color: rgb(165, 179, 179);
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     }
+     #mailbox{
+          background-color: aliceblue;
+          font-size: 1rem;
+          width:26vw;
+          border-left: 3px solid #07ADED;
+          border-radius: 5px;
+          margin: 10px auto;
+          padding: 10px 10px;
+     }
+     #mail{
+          width: 100%;
+          margin: 0px 2px;
+          border-bottom: 1px solid lightgray;
+     }
+     #mail label{
+          font-size:0.9rem;
+          color: rgb(165, 179, 179);
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          margin: 10px 20px;
+          padding: 10px 0px;
+     }
+     #mail input{
+    width:26vw;
+    border:0.1px solid rgb(165, 179, 179);
+    margin: 10px 20px;
+    padding: 8px 6px;
+    outline: none;
+    border-radius: 4px;
+     }
+     #btn{
+          
+     font-size: 15px;
+     font-weight: bold;
+     text-align: center;
+     background-color:#04B0EF;
+     color: white;
+     border-radius: 5px;
+     display: block;
+     width:80%;
+    display: block;
+    margin: 0px auto 8px;
+    margin-left: 38px;
+    outline: none;
+    border: none;
+     /* margin: 15px 135PX; */
+     padding: 6px 1px;
+}
+#btn:hover{
+     background:#2196f3;
+     box-shadow: 1px 3px 7px #04B0Ed ;
+      /* box-shadow: 0 0 10px #2196f3,0 0 15px #2196f3; */
+}
+#remember center{
+     margin: 10px auto;
+     font-size:0.9rem;
+          color: rgb(165, 179, 179);
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#remember a{
+     text-decoration: none;
+     color:#04B0Ed;
+
+}
+#remember a:hover{
+     color:aqua;
+     cursor: pointer;
+}
+hr{
+     background-color:transparent; 
+}
+</style>
+<body>
+     <div class="container">
+          <div id="head">
+               <img src="../images/colgo.png" alt="logo"><span>VITM</span>
+          </div>
+               <div id="box">
+                    <div id="forget" >
+                         <p>Forgot Password?</p>
+                         <center>Recover Your account Password</center>
+                    </div>
+                   
+                    <div id="mail">
+                         <div id="mailbox" >An email with password has been sent to email address,if it exists in our system.</div>
+                         <label for="">EMAIL ADDRESS:</label><br>
+                         <input type="text" placeholder="Your Mail address" >
+                            <br>  <button id="btn">Send</button>
+                         </div>
+                         
+                            <div id="remember">
+                         <center>Remember your password?
+                              <a href="../index.html" target="_blank">Login</a></center>
+                            </div>
+                   
+               </div>
+     </div>
+</body>
+</html>
